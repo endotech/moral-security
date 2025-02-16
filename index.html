@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>情報モラル・情報セキュリティーの授業</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+    <!-- 必要に応じてアイコンライブラリを追加 -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+</head>
+<body>
+    <header>
+        <h1>情報モラル・情報セキュリティーの授業</h1>
+    </header>
+    <main>
+        <!-- トップページ -->
+        <section id="top-page">
+            <h2>授業一覧</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>時間</th>
+                        <th>単元名</th>
+                        <th>学習内容</th>
+                        <th>目標</th>
+                        <th>詳細</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 情報モラル -->
+                    <tr>
+                        <td>1時間目</td>
+                        <td>情報モラル</td>
+                        <td>ネットへの情報発信になぜ注意が必要か？（犯行計画を推理しよう）</td>
+                        <td>仮想サイト（ブログやSNS等）を利用し、情報を収集し、その情報から犯行計画を推理する活動を通して、SNS等で情報を発信する際の危険性に気づき、どのような注意が必要なのかを考える。</td>
+                        <td><button onclick="openTab('lesson1')">詳細を見る</button></td>
+                    </tr>
+                    <tr>
+                        <td>2時間目</td>
+                        <td>情報セキュリティー</td>
+                        <td>サイバー空間の情報はどのように守られているのか？（パスワード突破ゲーム）</td>
+                        <td>機密性を高めるための技術として個人認証を例に取り上げ、パスワードを推測する活動を通して、自身の情報セキュリティーに対する意識を高める。</td>
+                        <td><button onclick="openTab('lesson2')">詳細を見る</button></td>
+                    </tr>
+                    <!-- 情報セキュリティー -->
+                    <tr>
+                        <td>3時間目</td>
+                        <td>情報セキュリティー</td>
+                        <td>暗号化が果たしている役割はなんだろう？（暗号解読ゲーム）</td>
+                        <td>暗号解読を行う活動を通して、情報通信における暗号化の方法や必要性について基本的な理解を行う。</td>
+                        <td><button onclick="openTab('lesson3')">詳細を見る</button></td>
+                    </tr>
+                    <tr>
+                        <td>4時間目</td>
+                        <td>情報セキュリティー</td>
+                        <td>悪意のある攻撃から身をまもるためには？（フィッシングメールを見抜く）</td>
+                        <td>フィッシングメールを見抜く活動や不正プログラムを体験する活動を通して、内容をしっかりと確認するとともにウイルス対策ソフトなど技術的に解決していくことの大切さについて理解する。</td>
+                        <td><button onclick="openTab('lesson4')">詳細を見る</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 授業詳細ページ（タブ形式） -->
+
+        <!-- 1時間目 -->
+        <section id="lesson1" class="tab-content">
+            <h2>ネットへの情報発信になぜ注意が必要か？（犯行計画を推理しよう）</h2>
+            <p><a href="https://endotech.github.io/endovlog/" target="_blank">授業で使用するサイトはこちら</a></p>
+
+            <!-- 授業の流れをPDFとして埋め込む -->
+            <h3>授業の流れ（PDF）</h3>
+            <div class="pdf-container">
+                <iframe src="materials/lesson1-flow.pdf" width="100%" height="600px">
+                    お使いのブラウザではPDFを表示できません。<a href="materials/lesson1-flow.pdf" download>こちらからダウンロードしてください。</a>
+                </iframe>
+            </div>
+
+            <h3>授業資料</h3>
+
+            <!-- スライド表示エリア -->
+            <div class="slide-container">
+                <button class="prev-button" onclick="changeSlide(-1, 'lesson1')">前へ</button>
+                <img id="lesson1-slide" src="image/スライド1.png" alt="スライド1">
+                <button class="next-button" onclick="changeSlide(1, 'lesson1')">次へ</button>
+            </div>
+
+            <!-- スライド資料のダウンロードリンク -->
+            <p>
+                <a href="materials/lesson1-slides.pptx" download class="download-button">
+                    スライドをダウンロード（PowerPoint形式）
+                </a>
+            </p>
+            <p>
+                <a href="materials/lesson1-slides.pdf" download class="download-button">
+                    スライドをダウンロード（PDF形式）
+                </a>
+            </p>
+
+            <button onclick="closeTab()">閉じる</button>
+        </section>
+
+        <!-- 2時間目 -->
+        <section id="lesson2" class="tab-content">
+            <h2>サイバー空間の情報はどのように守られているのか？（パスワード突破ゲーム）</h2>
+            <p><a href="https://endotech.github.io/passwordsecurity/" target="_blank">授業で使用するサイトはこちら</a></p>
+
+            <!-- 授業の流れをPDFとして埋め込む -->
+            <h3>授業の流れ（PDF）</h3>
+            <div class="pdf-container">
+                <iframe src="materials/lesson2-flow.pdf" width="100%" height="600px">
+                    お使いのブラウザではPDFを表示できません。<a href="materials/lesson2-flow.pdf" download>こちらからダウンロードしてください。</a>
+                </iframe>
+            </div>
+
+            <h3>授業資料</h3>
+
+            <!-- スライド表示エリア -->
+            <div class="slide-container">
+                <button class="prev-button" onclick="changeSlide(-1, 'lesson2')">前へ</button>
+                <img id="lesson2-slide" src="image/スライド18.png" alt="スライド18">
+                <button class="next-button" onclick="changeSlide(1, 'lesson2')">次へ</button>
+            </div>
+
+            <!-- スライド資料のダウンロードリンク -->
+            <p>
+                <a href="materials/lesson2-slides.pptx" download class="download-button">
+                    スライドをダウンロード（PowerPoint形式）
+                </a>
+            </p>
+            <p>
+                <a href="materials/lesson2-slides.pdf" download class="download-button">
+                    スライドをダウンロード（PDF形式）
+                </a>
+            </p>
+
+            <button onclick="closeTab()">閉じる</button>
+        </section>
+
+        <!-- 3時間目 -->
+        <section id="lesson3" class="tab-content">
+            <h2>3時間目：暗号化が果たしている役割はなんだろう？（暗号解読ゲーム）</h2>
+            <p><a href="https://endotech.github.io/encrypt/" target="_blank">授業で使用するサイトはこちら</a></p>
+
+            <!-- 授業の流れをPDFとして埋め込む -->
+            <h3>授業の流れ（PDF）</h3>
+            <div class="pdf-container">
+                <iframe src="materials/lesson3-flow.pdf" width="100%" height="600px">
+                    お使いのブラウザではPDFを表示できません。<a href="materials/lesson3-flow.pdf" download>こちらからダウンロードしてください。</a>
+                </iframe>
+            </div>
+
+            <h3>授業資料</h3>
+
+            <!-- スライド表示エリア -->
+            <div class="slide-container">
+                <button class="prev-button" onclick="changeSlide(-1, 'lesson3')">前へ</button>
+                <img id="lesson3-slide" src="image/スライド25.png" alt="スライド25">
+                <button class="next-button" onclick="changeSlide(1, 'lesson3')">次へ</button>
+            </div>
+
+            <!-- スライド資料のダウンロードリンク -->
+            <p>
+                <a href="materials/lesson3-slides.pptx" download class="download-button">
+                    スライドをダウンロード（PowerPoint形式）
+                </a>
+            </p>
+            <p>
+                <a href="materials/lesson3-slides.pdf" download class="download-button">
+                    スライドをダウンロード（PDF形式）
+                </a>
+            </p>
+
+            <button onclick="closeTab()">閉じる</button>
+        </section>
+
+        <!-- 4時間目 -->
+        <section id="lesson4" class="tab-content">
+            <h2>4時間目：悪意のある攻撃から身をまもるためには？（フィッシングメールを見抜く）</h2>
+            <p><a href="https://endotech.github.io/mail/" target="_blank">授業で使用するサイトはこちら</a></p>
+
+            <!-- 授業の流れをPDFとして埋め込む -->
+            <h3>授業の流れ（PDF）</h3>
+            <div class="pdf-container">
+                <iframe src="materials/lesson4-flow.pdf" width="100%" height="600px">
+                    お使いのブラウザではPDFを表示できません。<a href="materials/lesson4-flow.pdf" download>こちらからダウンロードしてください。</a>
+                </iframe>
+            </div>
+
+            <h3>授業資料</h3>
+
+            <!-- スライド表示エリア -->
+            <div class="slide-container">
+                <button class="prev-button" onclick="changeSlide(-1, 'lesson4')">前へ</button>
+                <img id="lesson4-slide" src="image/スライド32.png" alt="スライド32">
+                <button class="next-button" onclick="changeSlide(1, 'lesson4')">次へ</button>
+            </div>
+
+            <!-- スライド資料のダウンロードリンク -->
+            <p>
+                <a href="materials/lesson4-slides.pptx" download class="download-button">
+                    スライドをダウンロード（PowerPoint形式）
+                </a>
+            </p>
+            <p>
+                <a href="materials/lesson4-slides.pdf" download class="download-button">
+                    スライドをダウンロード（PDF形式）
+                </a>
+            </p>
+
+            <button onclick="closeTab()">閉じる</button>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Endo Naoya</p>
+    </footer>
+</body>
+</html>
